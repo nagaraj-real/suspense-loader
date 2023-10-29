@@ -1,22 +1,28 @@
 import "./App.css";
-import { Button, SuspenseLoader } from "../lib/main";
-import { Load } from "./Load.jsx";
+import { SuspenseLoaderFlex } from "../lib/main";
 import { useRandomCounter } from "./hooks/useRandomCounter.js";
+import React from "react";
+const Load = React.lazy(
+  () =>
+    new Promise((resolve) => {
+      import("./DefaultLoad.tsx").then((result: any) => {
+        setTimeout(() => {
+          resolve(result);
+        }, 10000);
+      });
+    })
+);
 
 function App() {
   const data = useRandomCounter();
   return (
     <>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
-      <Button type="button">Test</Button>
-      <SuspenseLoader
-        count={2}
-        type="image"
-        className="flex justify-center gap-20"
-      >
+      <button type="button">Test</button>
+      <SuspenseLoaderFlex count={1} type="card">
         <Load />
         <h2>{data}</h2>
-      </SuspenseLoader>
+      </SuspenseLoaderFlex>
     </>
   );
 }
