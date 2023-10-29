@@ -6,6 +6,6 @@ export function Button(props: React.ButtonHTMLAttributes<HTMLButtonElement>) {
       className={`${className} ${styles.button}`}
       {...restProps}
       {...props}
-    />
+    ></button>
   );
 }
