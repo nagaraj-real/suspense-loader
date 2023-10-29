@@ -2,15 +2,17 @@
 
 A fully flexible React Suspense fallback Loader which uses Tailwind to render high quality css skeletons.
 
-**Motivation**
+**Motivation** :gem:
 
 Skeleton screens are a technique used to improve the user experience while content is loading. They show a rough layout of the content that is about to appear, which gives the user a sense of progress. This technique can make the loading process feel faster and more engaging.
 
-More information can be found here - https://www.uxdesigninstitute.com/blog/whats-a-skeleton-screen/
+More information can be found here - [What's a skeleton screen ?](https://www.uxdesigninstitute.com/blog/whats-a-skeleton-screen/)
 
-This library provides a default set of fallback loaders inspired by flowbite (https://flowbite.com/) and tailwind css (https://tailwindcss.com/)
+This library provides a default set of fallback loaders inspired by [Flowbite](https://flowbite.com/) and [Tailwind](https://tailwindcss.com/)
 
-**Quick Start**
+<hr/>
+
+**Quick Start** :rocket:
 
 _Pre-requisites_
 The library is compatible with all React + Tailwind projects.
@@ -29,8 +31,9 @@ Update tailwind.config.js file
     "./node_modules/suspense-loader/dist/**/*.{js,ts,jsx,tsx}",
   ],
 ```
+<hr/>
 
-**Usage**
+**Usage** :book:
 
 _SuspenseLoaderFlex_ applies flex styles by default on parent layout component.
 
@@ -40,20 +43,24 @@ _SuspenseLoaderFlex_ applies flex styles by default on parent layout component.
   </SuspenseLoaderFlex>
 ```
 
-_SuspenseLoader_ allows more customizations in styling layout.
+Use _SuspenseLoader_ if more customizations are needed in styling layout.
 
 ```
- <SuspenseFlex count={1} type="card" layoutClassName="grid gap-5">
+ <SuspenseLoader count={1} type="card" layoutClassName="grid gap-5">
         <AsyncComponent />
-  </SuspenseFlex>
+  </SuspenseLoader>
 ```
 
 **Props**
 
-_count_ - Provide the number of repetitions needed. Defaults to 1.
-_type_ - Accepts the type of fallback skelelton (Optional). Accepts "video" | "image" | "card" | "list". Leaving it empty will load default loader skeleton.
-_layoutClassName_ - CSS/Tailwind class names for the parent layout component.
-_placeholderClassName_ - CSS/Tailwind class names for the repeating child components.
+All props are optional.
+
+<p> count - Provide the number of repetitions needed. Defaults to 1.</p>
+<p> type - Accepts the type of fallback skeleton. Accepts "video" | "image" | "card" | "list"| ""</p>
+<p> layoutClassName - CSS/Tailwind class names for the parent layout component.</p>
+<p> placeholderClassName - CSS/Tailwind class names for the repeating child components. </p>
+
+<hr/>
 
 **Demos**
 
