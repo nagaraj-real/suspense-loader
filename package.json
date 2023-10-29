@@ -4,7 +4,7 @@
   "type": "module",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
-  "description": "React Suspense loader component that renders high quality tailwind skeleton css placeholders",
+  "description": "Fully flexible React Suspense loader which renders high quality tailwind skeletons",
   "keywords": [
     "react",
     "suspense",
@@ -12,7 +12,8 @@
     "skeleton",
     "loader",
     "placeholder",
-    "nextjs"
+    "nextjs",
+    "server components"
   ],
   "license": "ISC",
   "files": [
