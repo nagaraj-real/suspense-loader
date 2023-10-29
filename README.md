@@ -14,16 +14,16 @@ This library provides a default set of fallback loaders inspired by [Flowbite](h
 
 **Quick Start** :rocket:
 
-_Pre-requisites_
-The library is compatible with all React + Tailwind projects.
+*Pre-requisites*
+<p>The library is compatible with React + Tailwind projects.</p>
 
-Install package suspense-loader (https://www.npmjs.com/package/suspense-loader)
+Install suspense-loader npm package [suspense-loader](https://www.npmjs.com/package/suspense-loader)
 
 ```
 npm i suspense-loader
 ```
 
-Update tailwind.config.js file
+Update tailwind.config.js file in the project.
 
 ```
   content: [
@@ -43,7 +43,7 @@ _SuspenseLoaderFlex_ applies flex styles by default on parent layout component.
   </SuspenseLoaderFlex>
 ```
 
-Use _SuspenseLoader_ if more customizations are needed in styling layout.
+Use _SuspenseLoader_ for more flexibility in layout styling.
 
 ```
  <SuspenseLoader count={1} type="card" layoutClassName="grid gap-5">
