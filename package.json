@@ -5,6 +5,7 @@
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "description": "Fully flexible React Suspense loader which renders high quality tailwind skeletons",
+  "homepage": "https://github.com/nagaraj-real/suspense-loader/tree/main#readme",
   "keywords": [
     "react",
     "suspense",
