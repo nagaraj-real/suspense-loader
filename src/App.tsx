@@ -5,6 +5,7 @@ import React from "react";
 const Load = React.lazy(
   () =>
     new Promise((resolve) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       import("./DefaultLoad.tsx").then((result: any) => {
         setTimeout(() => {
           resolve(result);
