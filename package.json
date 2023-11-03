@@ -28,7 +28,8 @@
     "prepublishOnly": "npm run build",
     "postinstall": "husky install",
     "prepack": "pinst --disable",
-    "postpack": "pinst --enable"
+    "postpack": "pinst --enable",
+    "release": "release-it"
   },
   "peerDependencies": {
     "react": "^18.2.0",
@@ -39,6 +40,7 @@
     "**/*.css"
   ],
   "devDependencies": {
+    "@release-it/keep-a-changelog": "^4.0.0",
     "@types/node": "^20.8.7",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
@@ -56,6 +58,7 @@
     "postcss": "^8.4.31",
     "react": "next",
     "react-dom": "next",
+    "release-it": "^16.2.1",
     "tailwindcss": "^3.3.4",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",
@@ -65,6 +68,26 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "release-it": {
+    "git": {
+      "changelog": "yarn dlx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
+    },
+    "publishConfig": {
+      "registry": "https://registry.npmjs.org",
+      "access": "public"
+    },
+    "npm": {
+      "publish": false
+    },
+    "hooks": {
+      "before:init": [
+        "yarn lint"
+      ],
+      "after:bump": "npm run build",
+      "after:git:release": "echo After git push, before github release",
+      "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
     }
   },
   "packageManager": "yarn@4.0.1"
