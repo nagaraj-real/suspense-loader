@@ -78,9 +78,6 @@
       "registry": "https://registry.npmjs.org",
       "access": "public"
     },
-    "npm": {
-      "publish": false
-    },
     "hooks": {
       "before:init": [
         "yarn lint"
