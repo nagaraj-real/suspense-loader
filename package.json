@@ -41,7 +41,6 @@
   ],
   "devDependencies": {
     "@release-it/conventional-changelog": "^7.0.2",
-    "@release-it/keep-a-changelog": "^4.0.0",
     "@types/node": "^20.8.7",
     "@types/react": "^18.2.33",
     "@types/react-dom": "^18.2.14",
@@ -75,16 +74,13 @@
     "git": {
       "tagAnnotation": "Release v${version}",
       "tagName": "v${version}",
-      "changelog": "yarn dlx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
+      "changelog": "yarn dlx auto-changelog --stdout --commit-limit false --unreleased --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
     },
     "publishConfig": {
       "registry": "https://registry.npmjs.org",
       "access": "public"
     },
     "plugins": {
-      "@release-it/keep-a-changelog": {
-        "filename": "CHANGELOG.md"
-      },
       "@release-it/conventional-changelog": {
         "preset": "angular",
         "infile": "CHANGELOG.md"
