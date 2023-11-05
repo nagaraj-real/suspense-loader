@@ -6,6 +6,10 @@ A fully flexible React Suspense fallback Loader which uses Tailwind to render hi
 
 Skeleton screens are a technique used to improve the user experience while content is loading. They show a rough layout of the content that is about to appear, which gives the user a sense of progress. This technique can make the loading process feel faster and more engaging.
 
+<p align="left">
+  <img  src="https://github.com/nagaraj-real/suspense-loader/assets/17967313/a0a99220-352c-4dad-b86e-898265286258" alt="animated" />
+</p>
+
 More information can be found here - [What's a skeleton screen ?](https://www.uxdesigninstitute.com/blog/whats-a-skeleton-screen/)
 
 This library provides a default set of fallback loaders inspired by [Flowbite](https://flowbite.com/) and [Tailwind](https://tailwindcss.com/)
